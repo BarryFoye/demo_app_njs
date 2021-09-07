@@ -1,0 +1,34 @@
+<html>
+<header>
+    <title>Awesome title</title>
+</header>
+
+<body>
+    <h1>Awesome Incrementer</h1>
+
+    <button id="bInc" onclick="increment(update_page)">Incrementer</button>
+
+
+    <script type="text/javascript">
+        function increment(update_page) {
+            let xmlHttpI = new XMLHttpRequest();
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    update_page(xmlHttp.responseText);
+            }
+            xmlHttpI.open("GET", "http://localhost:3000/increment", true); // true for asynchronous 
+            xmlHttp.open("GET", "http://localhost:3000/count", true);
+            xmlHttpI.send(null);
+            xmlHttp.send(null);
+        }
+
+        function update_page(responseText) {
+            document.getElementById("count").innerHTML = responseText;
+        }
+    </script>
+
+    <p id="count">The counter is now: 0</p>
+</body>
+
+</html>

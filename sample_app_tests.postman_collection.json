@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "05ccd7a0-9d6e-48f1-a4be-e99360b03111",
+		"name": "sample app tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hidden_server",
+			"item": [
+				{
+					"name": "localhost:3100/setCount?count=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3100/setCount?count=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"setCount"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3100/incremented",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3100/incremented",
+							"host": [
+								"localhost"
+							],
+							"port": "3100",
+							"path": [
+								"incremented"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway_server",
+			"item": [
+				{
+					"name": "localhost:3000/increment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/increment",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"increment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/count",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"count"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http_server",
+			"item": [
+				{
+					"name": "localhost:8080/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
