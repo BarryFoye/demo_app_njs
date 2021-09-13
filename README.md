@@ -2,86 +2,76 @@
 
 ## Getting started
 
-### Windows
-On a windows you can run the start.bat file to:
-npm install the dependencies, then start the servers. It is a little brittle because it only uses a timeout to ensure things have happened and this may not be the case.
 
-Otherwise (Recommended) follow the below manual steps which work on both windows and ubuntu.
+### <a id="man"></a>Manual setup
 
-### Manual setup
+#### **Step 1.** 
+Clone the repo:
 
-1. Clone the repo:
-    ```bash
-    git clone https://github.com/BarryFoye/demo_app_njs.git
-    ```
+```bash
+git clone https://github.com/BarryFoye/demo_app_njs.git
+```
 
-2. Change to the app directory:
-    ```bash
-    cd demo_app_njs
-    ```
+#### **Step 2.** 
+Change to the app directory:
 
-3. Run the install dependencies script:
-    ```bash
-    npm install
-    ```
+```bash
+cd demo_app_njs
+```
 
-4. Then using 3 separate terminals and in the following order:
+#### **Step 3.** 
+Run the install dependencies script:
 
-    i.a. 
-    ```bash
-    cd hidden_server
-    ```
+```bash
+npm install
+```
 
-   i.b. 
-   ```bash
-   node index.js
-   ```
+#### **Step 4.** 
+Then using 3 separate terminals started from the demo_app_njs directory and in the following order:
 
-   ii.a. 
-    ```bash
-    cd gateway_server
-    ```
-
-   ii.b. 
-   ```bash
-   node index.js
-   ```
-
-   iii.a.
-   ```bash
-    cd http_server
-    ```
-
-   iii.b. 
-   ```bash
-   node index.js
-   ```
-
-5. Open browser on 
-http://localhost:8080
-
-
+Terminal 1:
+```bash
+cd hidden_server
+```
+```bash
+node index.js
+```
 When the hidden server starts you should see:
-
 ```javascript
 > Ready on http://localhost:3100
 ```
-
+Terminal 2: 
+```bash
+cd gateway_server
+```
+```bash
+node index.js
+```
 Once you start the gateway server you should see a:
-
 ```javascript
 200
 ```
-
-And if you check the hidden server, it should now have something like:
-
+And if you check the hidden server (terminal 1 if you followed this guide), it should now have something like:
 ```javascript
 > Ready on http://localhost:3100
 {"message":"/setCount?count=0","level":"info"}
 {"message":"/incremented","level":"info"}
 ```
-
+Terminal 3:
+```bash
+cd http_server
+```
+```bash
+node index.js
+```
 Finally starting the http server you'll see:
 ```javascript
 > HTTP_server ready on http://localhost:8080
 ```
+#### **Step 5.**
+Open a browser on: http://localhost:8080
+### Windows
+On a windows you can run the start.bat file to:
+npm install the dependencies, then start the servers. It is a little brittle because it only uses a timeout to ensure things have happened and this may not be the case.
+
+Otherwise (Recommended) follow the [manual steps](#man) which work on both windows and ubuntu.
