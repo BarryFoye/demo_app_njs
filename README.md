@@ -70,8 +70,3 @@ Finally starting the http server you'll see:
 ```
 #### **Step 5.**
 Open a browser on: http://localhost:8080
-### Windows
-On a windows you can run the start.bat file to:
-npm install the dependencies, then start the servers. It is a little brittle because it only uses a timeout to ensure things have happened and this may not be the case.
-
-Otherwise (Recommended) follow the [manual steps](#man) which work on both windows and ubuntu.
